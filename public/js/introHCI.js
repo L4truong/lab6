@@ -31,5 +31,10 @@ function addProjectDetails(e) {
 }
 
 function callBackFn(result) {
-	console.log("Need to complete this step");
+	var newProject =
+		'<img src="' + result.image + '" class="detailsImage">' +
+		'<h4>' + result.title + '</h4>' +
+		'<p><small>' + result.date +
+		'</small></p><br /><p>' + result.summary + '</p>'; 
+	$("#project" + result.id + " .details").html(newProject);
 }
